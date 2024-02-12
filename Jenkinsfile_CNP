@@ -1,9 +1,8 @@
 #!groovy
-
 @Library("Infrastructure")
 
 def type = "java"
-def product = "rpe"
-def component = "demo"
+def product = "opal"
+def component = "print-service"
 
 withPipeline(type, product, component) {}
