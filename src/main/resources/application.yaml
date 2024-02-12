@@ -16,7 +16,7 @@ management:
         include: health, info, prometheus
 
 springdoc:
-  packagesToScan: uk.gov.hmcts.reform.demo.controllers
+  packagesToScan: uk.gov.hmcts.reform.opal.controllers
   writer-with-order-by-keys: true
 
 spring:
