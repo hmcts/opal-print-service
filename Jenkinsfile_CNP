@@ -5,4 +5,20 @@ def type = "java"
 def product = "opal"
 def component = "print-service"
 
-withPipeline(type, product, component) {}
+withPipeline(type, product, component) {
+  afterAlways('smokeTest:dev') {
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-test-report/**/*'
+  }
+
+  afterAlways('smokeTest:stg') {
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'smoke-test-report/**/*'
+  }
+
+  afterAlways('functionalTest:dev') {
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'functional-test-report/**/*'
+  }
+
+  afterAlways('functionalTest:stg') {
+    steps.archiveArtifacts allowEmptyArchive: true, artifacts: 'functional-test-report/**/*'
+  }
+}
