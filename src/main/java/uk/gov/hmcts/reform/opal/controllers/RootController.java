@@ -23,6 +23,6 @@ public class RootController {
      */
     @GetMapping("/")
     public ResponseEntity<String> welcome() {
-        return ok("Welcome to spring-boot-template");
+        return ok("Welcome to opal-print-service");
     }
 }
