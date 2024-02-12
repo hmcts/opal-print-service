@@ -1,14 +1,14 @@
 version: '2.1'
 
 services:
-  spring-boot-template:
+  opal-print-service:
     build:
       context: .
       args:
         - http_proxy
         - https_proxy
         - no_proxy
-    image: hmctspublic.azurecr.io/spring-boot/template
+    image: hmctspublic.azurecr.io/opal/print-service
     environment:
       # these environment variables are used by java-logging library
       - ROOT_APPENDER
