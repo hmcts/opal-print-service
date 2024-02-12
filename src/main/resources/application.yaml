@@ -1,5 +1,5 @@
 server:
-  port: 4550
+  port: 4660
 
 # If you use a database then uncomment the `group:, readiness: and include: "db"` lines in the health probes and uncomment the datasource section
 management:
