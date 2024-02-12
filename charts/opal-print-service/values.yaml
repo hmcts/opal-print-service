@@ -1,5 +1,5 @@
 java:
-  applicationPort: 4550
+  applicationPort: 4660
   image: 'sdshmctspublic.azurecr.io/opal/print-service:latest'
   ingressHost: opal-print-service.{{ .Values.global.environment }}.platform.hmcts.net
   environment:
