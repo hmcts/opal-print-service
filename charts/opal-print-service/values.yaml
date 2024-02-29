@@ -17,5 +17,5 @@ java:
           alias: OPAL_PRINT_DB_USERNAME
         - name: print-service-POSTGRES-DATABASE
           alias: OPAL_PRINT_DB_NAME
-    environment:
-      RUN_DB_MIGRATION_ON_STARTUP: true
+  environment:
+    RUN_DB_MIGRATION_ON_STARTUP: true
