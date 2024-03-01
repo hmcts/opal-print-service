@@ -26,9 +26,9 @@ spring:
     name: Opal Print Service
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://${OPAL_PRINT_DB_HOST:localhost}:${OPAL_PRINT_DB_PORT:5432}/${OPAL_PRINT_DB_NAME:opal-log-audit-db}${OPAL_PRINT_DB_OPTIONS:}
-    username: ${OPAL_PRINT_DB_USERNAME:opal-log-audit}
-    password: ${OPAL_PRINT_DB_PASSWORD:opal-log-audit}
+    url: jdbc:postgresql://${OPAL_PRINT_DB_HOST:localhost}:${OPAL_PRINT_DB_PORT:5432}/${OPAL_PRINT_DB_NAME:opal-print-db}${OPAL_PRINT_DB_OPTIONS:}
+    username: ${OPAL_PRINT_DB_USERNAME:opal-print}
+    password: ${OPAL_PRINT_DB_PASSWORD:opal-print}
     properties:
       charSet: UTF-8
     hikari:
