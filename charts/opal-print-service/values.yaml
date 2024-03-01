@@ -2,4 +2,20 @@ java:
   applicationPort: 4660
   image: 'sdshmctspublic.azurecr.io/opal/print-service:latest'
   ingressHost: opal-print-service.{{ .Values.global.environment }}.platform.hmcts.net
+  keyVaults:
+    opal:
+      secrets:
+        - name: app-insights-connection-string
+          alias: app-insights-connection-string
+        - name: print-service-POSTGRES-HOST
+          alias: OPAL_PRINT_DB_HOST
+        - name: print-service-POSTGRES-PASS
+          alias: OPAL_PRINT_DB_PASSWORD
+        - name: print-service-POSTGRES-PORT
+          alias: OPAL_PRINT_DB_PORT
+        - name: print-service-POSTGRES-USER
+          alias: OPAL_PRINT_DB_USERNAME
+        - name: print-service-POSTGRES-DATABASE
+          alias: OPAL_PRINT_DB_NAME
   environment:
+    RUN_DB_MIGRATION_ON_STARTUP: true

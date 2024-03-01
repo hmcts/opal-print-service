@@ -3,7 +3,7 @@ appVersion: "1.0"
 description: A Helm chart for opal-print-service App
 name: opal-print-service
 home: https://github.com/hmcts/opal-print-service
-version: 0.0.15
+version: 0.0.17
 maintainers:
   - name: HMCTS Opal team
 dependencies:
