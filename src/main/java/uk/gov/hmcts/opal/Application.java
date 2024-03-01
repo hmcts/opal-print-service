@@ -1,4 +1,4 @@
-package uk.gov.hmcts.reform.opal;
+package uk.gov.hmcts.opal;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package uk.gov.hmcts.reform.opal.config;
+package uk.gov.hmcts.opal.config;
 
 import io.swagger.v3.oas.models.ExternalDocumentation;
 import io.swagger.v3.oas.models.OpenAPI;

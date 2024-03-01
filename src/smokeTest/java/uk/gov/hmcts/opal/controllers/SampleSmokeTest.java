@@ -1,4 +1,4 @@
-package uk.gov.hmcts.reform.opal.controllers;
+package uk.gov.hmcts.opal.controllers;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
