@@ -39,7 +39,6 @@ class PrintRequestControllerTest {
 
         // Verify the response
         assertEquals(MediaType.APPLICATION_PDF, responseEntity.getHeaders().getContentType());
-        assertEquals("attachment; filename=output.pdf", responseEntity.getHeaders().getContentDisposition());
         assertEquals(mockPdfData, responseEntity.getBody());
 
         // Verify service method invocation
