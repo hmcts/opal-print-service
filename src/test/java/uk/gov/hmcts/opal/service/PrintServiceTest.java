@@ -8,7 +8,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import uk.gov.hmcts.opal.dto.PrintRequest;
-import uk.gov.hmcts.opal.service.PrintService;
 
 import java.io.ByteArrayOutputStream;
 import javax.xml.transform.Transformer;
