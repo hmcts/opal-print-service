@@ -21,7 +21,7 @@ springdoc:
 
 spring:
   config:
-    import: "optional:configtree:/mnt/secrets/rpe/"
+    import: "optional:configtree:/mnt/secrets/opal/"
   application:
     name: Opal Print Service
   datasource:
