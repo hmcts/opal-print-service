@@ -8,7 +8,6 @@ services:
         - http_proxy
         - https_proxy
         - no_proxy
-    image: hmctspublic.azurecr.io/opal/print-service
     environment:
       # these environment variables are used by java-logging library
       - ROOT_APPENDER
@@ -34,7 +33,7 @@ services:
     ports:
       - 5432:5432
     volumes:
-      - opal-database-data:/var/lib/postgresql/data
+      - opal-print-database-data:/var/lib/postgresql/data
 
 volumes:
-  opal-database-data:
+  opal-print-database-data:
