@@ -214,7 +214,6 @@ dependencies {
   implementation group: 'org.apache.xmlgraphics', name: 'fop-events', version: '2.9'
   implementation group: 'org.apache.xmlgraphics', name: 'xmlgraphics-commons', version: '2.9'
   implementation group: 'org.apache.pdfbox', name: 'pdfbox', version: '2.0.29'
-  implementation group: 'com.itextpdf', name: 'itextpdf', version: '5.5.13.3'
   implementation group: 'net.sf.saxon', name: 'Saxon-HE', version: '12.4'
 
   implementation group: 'jakarta.xml.bind', name: 'jakarta.xml.bind-api', version: '3.0.0'
