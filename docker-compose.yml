@@ -24,3 +24,17 @@ services:
       - LOGBACK_REQUIRE_ERROR_CODE=false
     ports:
       - $SERVER_PORT:$SERVER_PORT
+  opal-print-db:
+    image: postgres:15
+    restart: always
+    environment:
+      - POSTGRES_DB=opal-print-db
+      - POSTGRES_USER=opal-print
+      - POSTGRES_PASSWORD=opal-print
+    ports:
+      - 5432:5432
+    volumes:
+      - opal-database-data:/var/lib/postgresql/data
+
+volumes:
+  opal-database-data:
