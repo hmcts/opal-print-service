@@ -29,7 +29,7 @@ public class PrintRequestController {
         log.info(":POST:postPrintRequest: query: \n{}", printRequest.toString());
 
 
-        byte[] response = printService.generatePDF(printRequest);
+        byte[] response = printService.generatePdf(printRequest);
 
         if (response == null) {
             return ResponseEntity.noContent().build();
