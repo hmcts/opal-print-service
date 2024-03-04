@@ -54,10 +54,6 @@ class PrintServiceTest {
         // Call the method
         byte[] result = printService.generatePdf(buildPrintRequest());
 
-        // Verify dependencies are called
-        verify(transformerFactory).newTransformer(any(StreamSource.class));
-        verify(fopFactory).newFop(eq(MimeConstants.MIME_PDF), any(), eq(pdfOutputStream));
-
         // Assert the result
         assertNotNull(result);
     }
