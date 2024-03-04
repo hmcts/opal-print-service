@@ -8,6 +8,7 @@ import org.apache.fop.apps.FOUserAgent;
 import org.apache.fop.apps.Fop;
 import org.apache.fop.apps.FopFactory;
 import org.apache.fop.apps.MimeConstants;
+import org.slf4j.Logger;
 import org.springframework.stereotype.Service;
 import uk.gov.hmcts.opal.dto.PrintRequest;
 
@@ -60,8 +61,8 @@ public class PrintService {
 
             return pdfBytes;
         } catch (Exception e) {
-            e.printStackTrace();
-            return null; // or handle the exception as appropriate in your application
+
+            return null;
         }
     }
 
@@ -83,7 +84,7 @@ public class PrintService {
             // Get XML as string
             return writer.toString();
         } catch (JAXBException e) {
-            e.printStackTrace();
+
             return null;
         }
     }
