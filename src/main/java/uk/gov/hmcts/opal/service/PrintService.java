@@ -8,7 +8,6 @@ import org.apache.fop.apps.FOUserAgent;
 import org.apache.fop.apps.Fop;
 import org.apache.fop.apps.FopFactory;
 import org.apache.fop.apps.MimeConstants;
-import org.slf4j.Logger;
 import org.springframework.stereotype.Service;
 import uk.gov.hmcts.opal.dto.PrintRequest;
 
