@@ -8,11 +8,15 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.TestPropertySource;
 
 import static io.restassured.RestAssured.given;
 
 
 @SpringBootTest
+@TestPropertySource(properties = {
+    "spring.flyway.enabled=false"
+})
 class SampleSmokeTest {
 
     @Value("${TEST_URL:http://localhost:4660}")
