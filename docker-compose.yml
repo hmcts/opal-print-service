@@ -24,7 +24,7 @@ services:
     ports:
       - $SERVER_PORT:$SERVER_PORT
   opal-print-db:
-    image: postgres:15
+    image: postgres:16
     restart: always
     environment:
       - POSTGRES_DB=opal-print-db
