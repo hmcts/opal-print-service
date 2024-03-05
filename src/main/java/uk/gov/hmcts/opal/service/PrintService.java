@@ -32,7 +32,8 @@ public class PrintService {
     public byte[] generatePdf(PrintRequest request) {
         try {
             // Load XSLT template
-            Source xslt = new StreamSource(new File("src/main/resources/ABD-25_0-postscript.xsl"));
+            Source xslt = new StreamSource(getClass().getClassLoader()
+                                               .getResourceAsStream("ABD-25_0-postscript.xsl"));
 
             // Create a transformer factory
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
@@ -44,7 +45,8 @@ public class PrintService {
 
             // Create PDF bytes
             ByteArrayOutputStream pdfOutputStream = new ByteArrayOutputStream();
-            FopFactory fopFactory = FopFactory.newInstance(new File("src/main/resources/fop.xml").toURI());
+            FopFactory fopFactory = FopFactory.newInstance(getClass().getClassLoader()
+                                                               .getResource("fop.xml").toURI());
             final FOUserAgent foUserAgent = fopFactory.newFOUserAgent();
             Fop fop = fopFactory.newFop(MimeConstants.MIME_PDF, foUserAgent, pdfOutputStream);
 
