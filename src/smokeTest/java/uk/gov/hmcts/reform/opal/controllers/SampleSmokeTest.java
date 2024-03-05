@@ -7,10 +7,12 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import static io.restassured.RestAssured.given;
 
 
+@SpringBootTest
 class SampleSmokeTest {
 
     @Value("${TEST_URL:http://localhost:4660}")
