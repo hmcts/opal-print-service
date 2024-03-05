@@ -210,6 +210,11 @@ dependencies {
   testImplementation 'org.projectlombok:lombok:1.18.30'
   testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
 
+  testImplementation 'org.springframework.boot:spring-boot-devtools'
+  testImplementation 'org.springframework.boot:spring-boot-testcontainers'
+  testImplementation 'org.testcontainers:junit-jupiter:1.19.6'
+  testImplementation 'org.testcontainers:postgresql'
+
   testImplementation(platform('org.junit:junit-bom:5.10.2'))
   testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
   testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', {
