@@ -14,13 +14,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Logger;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-
 public class GeneratePdfStepDef extends BaseStepDef {
     Logger log = Logger.getLogger(GeneratePdfStepDef.class.getName());
     ThreadLocal<String> pdfName = new ThreadLocal<>();
 
-    private static void savePDFToFile(byte[] pdfContent, String filePath) {
+    private static void savePdfToFile(byte[] pdfContent, String filePath) {
         try (FileOutputStream fos = new FileOutputStream(new File(filePath))) {
             fos.write(pdfContent);
         } catch (IOException e) {
@@ -35,7 +33,7 @@ public class GeneratePdfStepDef extends BaseStepDef {
     }
 
     @When("I make a request to the generate pdf api with {string}")
-    public void generatePDFApi(String pathToFile) throws IOException {
+    public void generatePdfApi(String pathToFile) throws IOException {
         String jsonToPost = new String(Files.readAllBytes(Paths.get(getBaseJsonPath() + pathToFile)));
         Response response = SerenityRest
             .given()
@@ -45,7 +43,7 @@ public class GeneratePdfStepDef extends BaseStepDef {
             .when()
             .post(getTestUrl() + "/api/print/generate-pdf");
         pdfName.set("ABD_" + dateTime() + "_.pdf");
-        savePDFToFile(response.getBody().asByteArray(), pdfOutputPath() + pdfName.get());
+        savePdfToFile(response.getBody().asByteArray(), pdfOutputPath() + pdfName.get());
     }
 
     @When("The pdf is syntactically correct")
