@@ -43,13 +43,13 @@ public class GeneratePdfStepDef extends BaseStepDef {
             .when()
             .post(getTestUrl() + "/api/print/generate-pdf");
         pdfName.set("ABD_" + dateTime() + "_.pdf");
-        savePdfToFile(response.getBody().asByteArray(), pdfOutputPath() + pdfName.get());
+        savePdfToFile(response.getBody().asByteArray(), pdfName.get());
     }
 
     @When("The pdf is syntactically correct")
     public void pdfSyntaxCorrect() throws IOException {
         try {
-            PDDocument pdf = PDDocument.load(new File(pdfOutputPath() + pdfName.get()));
+            PDDocument pdf = PDDocument.load(new File(pdfName.get()));
             pdf.close();
         } catch (IOException e) {
             log.info("PDF syntax is incorrect, could not be loaded: " + e);
