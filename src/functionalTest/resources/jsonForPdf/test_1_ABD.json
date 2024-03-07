@@ -1,0 +1,59 @@
+{
+  "header": {
+    "courtName": "Adult Panel",
+    "code": "2570",
+    "line1": "no enforcement header contact details defined for this CT/CMU"
+  },
+  "division": "073",
+  "accountNumber": "16000543R WL",
+  "caseNumber": "011600020040",
+  "dob": "10 October 1963",
+  "defendantName": "Mr Test ATCM",
+  "sex": "M",
+  "schema": {
+    "libra": "LIBRA",
+    "met": "MET73"
+  },
+  "defendantAddress": {
+    "name": "Mr Test ATCM",
+    "address": {
+      "line1": "7 Dagger Lane",
+      "postcode": "N34 7HJ"
+    },
+    "company": "N"
+  },
+  "amountOutstanding": "1,500.00",
+  "defendantInDefault": "N",
+  "dwpapNumber": null,
+  "offences": {
+    "offence": {
+      "caseNumber": "011600020040",
+      "dateImposed": "13 Oct 2016",
+      "offenceSuffix": "1",
+      "offenceTitle": "Theft from the person of another",
+      "offenceStartDate": "10/10/2016",
+      "dvla": "Y",
+      "dateBegun": "13/10/2016",
+      "impositions": {
+        "imposition": {
+          "impositionCode": "FO",
+          "impositionText": "Fine",
+          "impositionType": "UPD - Fine",
+          "amountImposed": "1,500.00",
+          "paid": "0.00",
+          "balance": "1,500.00"
+        }
+      }
+    },
+    "totalImposition": "1,500.00",
+    "accountTotal": "1,500.00",
+    "totalPaid": "0.00"
+  },
+  "dateProduced": "13 October 2016",
+  "sessionId": "551293",
+  "registerValidated": "Y",
+  "dateOfOrder": "13 October 2016",
+  "signature": "No name entered",
+  "endTime": "17:36:11",
+  "elapsedSecs": "410.61"
+}
