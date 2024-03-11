@@ -240,7 +240,7 @@ dependencies {
   implementation group: 'net.sf.saxon', name: 'Saxon-HE', version: '12.4'
 
   implementation group: 'jakarta.xml.bind', name: 'jakarta.xml.bind-api', version: '3.0.1'
-  implementation group: 'org.glassfish.jaxb', name: 'jaxb-runtime', version: '3.0.0'
+  implementation group: 'org.glassfish.jaxb', name: 'jaxb-runtime', version: '3.0.2'
 
   testImplementation 'org.springframework.boot:spring-boot-devtools'
   testImplementation 'org.springframework.boot:spring-boot-testcontainers'
