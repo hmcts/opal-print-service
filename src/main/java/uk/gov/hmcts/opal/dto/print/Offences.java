@@ -13,9 +13,8 @@ import java.util.List;
 @AllArgsConstructor
 public class Offences {
 
-    private List<Offence> offenceList;
-    private String totalImposition;
+    private List<Offence> offence;
     private String accountTotal;
-    private String totalPaid;
+    private String accountPaid;
 
 }

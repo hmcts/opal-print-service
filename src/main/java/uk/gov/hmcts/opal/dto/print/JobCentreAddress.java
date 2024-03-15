@@ -9,10 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Address {
+public class JobCentreAddress {
 
-    private String line1;
-    private String line2;
-    private String line3;
-    private String postcode;
+    private Address address;
 }

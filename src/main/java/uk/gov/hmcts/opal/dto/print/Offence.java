@@ -11,12 +11,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Offence {
 
-    private String caseNumber;
-    private String dateImposed;
-    private String offenceSuffix;
-    private String offenceTitle;
-    private String offenceStartDate;
-    private String dvla;
-    private String dateBegun;
+    private String dateimposed;
+    private String casenumber;
+    private String offencecode;
+    private String offencetitle;
+    private String ticketnumber;
+    private String ctoname;
+    private String vehiclereg;
+    private String timeofoffence;
+    private String placeofoffence;
+    private String ntonth;
+    private String dateissued;
+    private String licenceno;
     private Impositions impositions;
+    private String offencetotal;
 }
