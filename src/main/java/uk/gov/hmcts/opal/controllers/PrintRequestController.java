@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import uk.gov.hmcts.opal.dto.PrintRequest;
+import uk.gov.hmcts.opal.dto.print.Document;
 import uk.gov.hmcts.opal.service.PrintService;
 
 @RestController
@@ -25,7 +25,7 @@ public class PrintRequestController {
 
     @PostMapping (value = "/generate-pdf", consumes = MediaType.APPLICATION_JSON_VALUE)
     @Operation(summary = "Generates a PDF from a provided print request")
-    public ResponseEntity<byte[]> postPrintRequest(@RequestBody PrintRequest printRequest) {
+    public ResponseEntity<byte[]> postPrintRequest(@RequestBody Document printRequest) {
         log.info(":POST:postPrintRequest: query: \n{}", printRequest.toString());
 
 

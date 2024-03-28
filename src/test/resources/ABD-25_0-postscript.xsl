@@ -118,7 +118,7 @@
                                  <fo:inline font-size="8pt">
                                     <xslt:text>										</xslt:text>
                                     <xslt:variable name="fieldValue_id6851634">
-                                       <xslt:value-of select="printRequest/defendantName"/>
+                                       <xslt:value-of select="/document/data/job/defendantname"/>
                                     </xslt:variable>
                                     <xsl:if test="string($fieldValue_id6851634)">
                                        <fo:inline id="18A66140">
@@ -154,7 +154,7 @@
                            <fo:table-cell text-align="right">
                               <fo:block font-size="8pt">
                                  <xslt:variable name="fieldValue_id6851647">
-                                    <xslt:value-of select="printRequest/dateProduced"/>
+                                    <xslt:value-of select="/document/data/job/dateproduced"/>
                                  </xslt:variable>
                                  <xsl:if test="string($fieldValue_id6851647)">
                                     <fo:inline id="18DA6140" font-size="8pt">
@@ -186,7 +186,7 @@
                                  <fo:inline font-size="8pt">
                                     <fo:inline>/ABD_</fo:inline>
                                     <xslt:variable name="fieldValue_id6851655">
-                                       <xslt:value-of select="printRequest/document/info/general/version"/>
+                                       <xslt:value-of select="/document/info/general/version"/>
                                     </xslt:variable>
                                     <xsl:if test="string($fieldValue_id6851655)">
                                        <fo:inline id="190F6140">
@@ -217,7 +217,7 @@
                                     </xsl:if>
                                     <fo:inline>/</fo:inline>
                                     <xslt:variable name="fieldValue_id6851661">
-                                       <xslt:value-of select="printRequest/document/info/general/docref"/>
+                                       <xslt:value-of select="/document/info/general/docref"/>
                                     </xslt:variable>
                                     <xsl:if test="string($fieldValue_id6851661)">
                                        <fo:inline id="19406140">
@@ -293,7 +293,7 @@
                                  <fo:inline font-size="8pt">
                                     <xslt:text>										</xslt:text>
                                     <xslt:variable name="fieldValue_id6851736">
-                                       <xslt:value-of select="printRequest/defendantName"/>
+                                       <xslt:value-of select="/document/data/job/defendantname"/>
                                     </xslt:variable>
                                     <xsl:if test="string($fieldValue_id6851736)">
                                        <fo:inline id="F0261412">
@@ -329,7 +329,7 @@
                            <fo:table-cell text-align="right">
                               <fo:block font-size="8pt">
                                  <xslt:variable name="fieldValue_id6851749">
-                                    <xslt:value-of select="printRequest/dateProduced"/>
+                                    <xslt:value-of select="/document/data/job/dateproduced"/>
                                  </xslt:variable>
                                  <xsl:if test="string($fieldValue_id6851749)">
                                     <fo:inline id="F3661412" font-size="8pt">
@@ -361,7 +361,7 @@
                                  <fo:inline font-size="8pt">
                                     <fo:inline>/ABD_</fo:inline>
                                     <xslt:variable name="fieldValue_id5893871">
-                                       <xslt:value-of select="printRequest/document/info/general/version"/>
+                                       <xslt:value-of select="/document/info/general/version"/>
                                     </xslt:variable>
                                     <xsl:if test="string($fieldValue_id5893871)">
                                        <fo:inline id="F6B61412">
@@ -392,7 +392,7 @@
                                     </xsl:if>
                                     <fo:inline>/</fo:inline>
                                     <xslt:variable name="fieldValue_id5893877">
-                                       <xslt:value-of select="printRequest/document/info/general/docref"/>
+                                       <xslt:value-of select="/document/info/general/docref"/>
                                     </xslt:variable>
                                     <xsl:if test="string($fieldValue_id5893877)">
                                        <fo:inline id="F9C61412">
@@ -468,7 +468,7 @@
                               <fo:block-container height="4.2mm" overflow="hidden">
                                  <fo:block>
                                     <xslt:variable name="fieldValue_id5893952">
-                                       <xslt:value-of select="printRequest/jobcentrename"/>
+                                       <xslt:value-of select="/document/data/job/jobcentrename"/>
                                     </xslt:variable>
                                     <xsl:if test="string($fieldValue_id5893952)">
                                        <fo:inline id="5650135">
@@ -513,7 +513,7 @@
                               <fo:block-container height="29.8mm" overflow="hidden">
                                  <fo:block>
                                     <xslt:variable name="fieldValue_id5893979">
-                                       <xslt:value-of select="printRequest/jobcentreaddress/address/line1"/>
+                                       <xslt:value-of select="/document/data/job/jobcentreaddress/address/line1"/>
                                     </xslt:variable>
                                     <xsl:if test="string($fieldValue_id5893979)">
                                        <fo:inline id="4983354">
@@ -545,7 +545,7 @@
                                  </fo:block>
                                  <fo:block>
                                     <xslt:variable name="fieldValue_id5893985">
-                                       <xslt:value-of select="printRequest/jobcentreaddress/address/line2"/>
+                                       <xslt:value-of select="/document/data/job/jobcentreaddress/address/line2"/>
                                     </xslt:variable>
                                     <xsl:if test="string($fieldValue_id5893985)">
                                        <fo:inline id="4962712">
@@ -577,7 +577,7 @@
                                  </fo:block>
                                  <fo:block>
                                     <xslt:variable name="fieldValue_id5893992">
-                                       <xslt:value-of select="printRequest/jobcentreaddress/address/line3"/>
+                                       <xslt:value-of select="/document/data/job/jobcentreaddress/address/line3"/>
                                     </xslt:variable>
                                     <xsl:if test="string($fieldValue_id5893992)">
                                        <fo:inline id="B0373099">
@@ -609,7 +609,7 @@
                                  </fo:block>
                                  <fo:block>
                                     <xslt:variable name="fieldValue_id5893998">
-                                       <xslt:value-of select="printRequest/jobcentreaddress/address/line4"/>
+                                       <xslt:value-of select="/document/data/job/jobcentreaddress/address/line4"/>
                                     </xslt:variable>
                                     <xsl:if test="string($fieldValue_id5893998)">
                                        <fo:inline id="23B27309">
@@ -641,7 +641,7 @@
                                  </fo:block>
                                  <fo:block>
                                     <xslt:variable name="fieldValue_id5921910">
-                                       <xslt:value-of select="printRequest/jobcentreaddress/address/line5"/>
+                                       <xslt:value-of select="/document/data/job/jobcentreaddress/address/line5"/>
                                     </xslt:variable>
                                     <xsl:if test="string($fieldValue_id5921910)">
                                        <fo:inline id="316C7309">
@@ -673,11 +673,11 @@
                                  </fo:block>
                                  <fo:block>
                                     <xsl:choose>
-                                       <xsl:when test="string(/jobcentreaddress/address/line6) != ''">
+                                       <xsl:when test="string(/document/data/job/jobcentreaddress/address/line6) != ''">
                                           <fo:inline>
                                              <fo:inline>
                                                 <xslt:variable name="fieldValue_id5921921">
-                                                   <xslt:value-of select="printRequest/jobcentreaddress/address/line6"/>
+                                                   <xslt:value-of select="/document/data/job/jobcentreaddress/address/line6"/>
                                                 </xslt:variable>
                                                 <xsl:if test="string($fieldValue_id5921921)">
                                                    <fo:inline id="39627309">
@@ -713,7 +713,7 @@
                                           <fo:inline>
                                              <fo:inline>
                                                 <xslt:variable name="fieldValue_id5921928">
-                                                   <xslt:value-of select="printRequest/jobcentreaddress/address/postcode"/>
+                                                   <xslt:value-of select="/document/data/job/jobcentreaddress/address/postcode"/>
                                                 </xslt:variable>
                                                 <xsl:if test="string($fieldValue_id5921928)">
                                                    <fo:inline id="1E19730A">
@@ -762,7 +762,7 @@
                                  <fo:block text-align="right">
                                     <fo:inline>Division: </fo:inline>
                                     <xslt:variable name="fieldValue_id5921954">
-                                       <xslt:value-of select="printRequest/division"/>
+                                       <xslt:value-of select="/document/data/job/division"/>
                                     </xslt:variable>
                                     <xsl:if test="string($fieldValue_id5921954)">
                                        <fo:inline id="4804264">
@@ -794,13 +794,13 @@
                                  </fo:block>
                                  <fo:block text-align="right">
                                     <xsl:choose>
-                                       <xsl:when test="string(/accountnumber) != ''">
+                                       <xsl:when test="string(/document/data/job/accountnumber) != ''">
                                           <fo:block id="5096428">
                                              <xslt:attribute name="id">5096428</xslt:attribute>
                                              <fo:block>
                                                 <fo:inline>Account number: </fo:inline>
                                                 <xslt:variable name="fieldValue_id5921970">
-                                                   <xslt:value-of select="printRequest/accountNumber"/>
+                                                   <xslt:value-of select="/document/data/job/accountnumber"/>
                                                 </xslt:variable>
                                                 <xsl:if test="string($fieldValue_id5921970)">
                                                    <fo:inline id="5557044" font-weight="bold">
@@ -836,13 +836,13 @@
                                  </fo:block>
                                  <fo:block text-align="right">
                                     <xsl:choose>
-                                       <xsl:when test="string(/casenumber) != ''">
+                                       <xsl:when test="string(/document/data/job/casenumber) != ''">
                                           <fo:block id="5671884">
                                              <xslt:attribute name="id">5671884</xslt:attribute>
                                              <fo:block>
                                                 <fo:inline>Case number: </fo:inline>
                                                 <xslt:variable name="fieldValue_id5921989">
-                                                   <xslt:value-of select="printRequest/caseNumber"/>
+                                                   <xslt:value-of select="/document/data/job/casenumber"/>
                                                 </xslt:variable>
                                                 <xsl:if test="string($fieldValue_id5921989)">
                                                    <fo:inline id="4786865" font-weight="normal">
@@ -878,13 +878,13 @@
                                  </fo:block>
                                  <fo:block text-align="right">
                                     <xsl:choose>
-                                       <xsl:when test="string(/dwpapnumber) != ''">
+                                       <xsl:when test="string(/document/data/job/dwpapnumber) != ''">
                                           <fo:block id="5170853">
                                              <xslt:attribute name="id">5170853</xslt:attribute>
                                              <fo:block>
                                                 <fo:inline>DWP AP number: </fo:inline>
                                                 <xslt:variable name="fieldValue_id5922007">
-                                                   <xslt:value-of select="printRequest/dwpapNumber"/>
+                                                   <xslt:value-of select="/document/data/job/dwpapnumber"/>
                                                 </xslt:variable>
                                                 <xsl:if test="string($fieldValue_id5922007)">
                                                    <fo:inline id="5693382">
@@ -961,7 +961,7 @@
                <fo:block text-align="left">
                   <fo:inline>The defendant is </fo:inline>
                   <xsl:choose>
-                     <xsl:when test="/defendantindefault = 'N'">
+                     <xsl:when test="/document/data/job/defendantindefault = 'N'">
                         <fo:inline id="23644A52">
                            <xslt:attribute name="id">23644A52</xslt:attribute>
                            <fo:inline>
@@ -979,7 +979,7 @@
                   <fo:inline>Amounts may be taken until £</fo:inline>
                   <fo:inline font-weight="bold">
                      <xslt:variable name="fieldValue_id5954788">
-                        <xslt:value-of select="printRequest/amountOutstanding"/>
+                        <xslt:value-of select="/document/data/job/amountoutstanding"/>
                      </xslt:variable>
                      <xsl:if test="string($fieldValue_id5954788)">
                         <fo:inline id="23984A52">
@@ -1052,7 +1052,7 @@
                                           number-columns-spanned="2">
                               <fo:block>
                                  <xslt:variable name="fieldValue_id5954852">
-                                    <xslt:value-of select="printRequest/defendantName"/>
+                                    <xslt:value-of select="/document/data/job/defendantname"/>
                                  </xslt:variable>
                                  <xsl:if test="string($fieldValue_id5954852)">
                                     <fo:inline id="4865895" font-weight="bold">
@@ -1115,7 +1115,7 @@
                                           padding-bottom="2pt">
                               <fo:block>
                                  <xslt:variable name="fieldValue_id5955168">
-                                    <xslt:value-of select="printRequest/defendantAddress/address/line1"/>
+                                    <xslt:value-of select="/document/data/job/defendantaddress/address/line1"/>
                                  </xslt:variable>
                                  <xsl:if test="string($fieldValue_id5955168)">
                                     <fo:inline id="78BE4A40" font-weight="bold">
@@ -1147,7 +1147,7 @@
                               </fo:block>
                               <fo:block>
                                  <xslt:variable name="fieldValue_id5955176">
-                                    <xslt:value-of select="printRequest/defendantAddress/address/line2"/>
+                                    <xslt:value-of select="/document/data/job/defendantaddress/address/line2"/>
                                  </xslt:variable>
                                  <xsl:if test="string($fieldValue_id5955176)">
                                     <fo:inline id="78BE4A40" font-weight="bold">
@@ -1179,7 +1179,7 @@
                               </fo:block>
                               <fo:block>
                                  <xslt:variable name="fieldValue_id5955183">
-                                    <xslt:value-of select="printRequest/defendantAddress/address/line3"/>
+                                    <xslt:value-of select="/document/data/job/defendantaddress/address/line3"/>
                                  </xslt:variable>
                                  <xsl:if test="string($fieldValue_id5955183)">
                                     <fo:inline id="78EF4A40" font-weight="bold">
@@ -1211,7 +1211,7 @@
                               </fo:block>
                               <fo:block>
                                  <xslt:variable name="fieldValue_id5955190">
-                                    <xslt:value-of select="printRequest/defendantAddress/address/line4"/>
+                                    <xslt:value-of select="/document/data/job/defendantaddress/address/line4"/>
                                  </xslt:variable>
                                  <xsl:if test="string($fieldValue_id5955190)">
                                     <fo:inline id="79244A40" font-weight="bold">
@@ -1243,7 +1243,7 @@
                               </fo:block>
                               <fo:block>
                                  <xslt:variable name="fieldValue_id5955198">
-                                    <xslt:value-of select="printRequest/defendantAddress/address/line5"/>
+                                    <xslt:value-of select="/document/data/job/defendantaddress/address/line5"/>
                                  </xslt:variable>
                                  <xsl:if test="string($fieldValue_id5955198)">
                                     <fo:inline id="79584A40" font-weight="bold">
@@ -1275,7 +1275,7 @@
                               </fo:block>
                               <fo:block>
                                  <xslt:variable name="fieldValue_id5955205">
-                                    <xslt:value-of select="printRequest/defendantAddress/address/postcode"/>
+                                    <xslt:value-of select="/document/data/job/defendantaddress/address/postcode"/>
                                  </xslt:variable>
                                  <xsl:if test="string($fieldValue_id5955205)">
                                     <fo:inline id="79894A40" font-weight="bold">
@@ -1320,13 +1320,13 @@
                                           padding-bottom="2pt">
                               <fo:block text-align="right">
                                  <xsl:choose>
-                                    <xsl:when test="string(/dob) != ''">
+                                    <xsl:when test="string(/document/data/job/dob) != ''">
                                        <fo:block id="672F4A41">
                                           <xslt:attribute name="id">672F4A41</xslt:attribute>
                                           <fo:block>
                                              <fo:inline>Born: </fo:inline>
                                              <xslt:variable name="fieldValue_id5955236">
-                                                <xslt:value-of select="printRequest/dob"/>
+                                                <xslt:value-of select="/document/data/job/dob"/>
                                              </xslt:variable>
                                              <xsl:if test="string($fieldValue_id5955236)">
                                                 <fo:inline id="67604A41">
@@ -1361,7 +1361,7 @@
                                  </xsl:choose>
                                  <fo:inline>National insurance number: </fo:inline>
                                  <xslt:variable name="fieldValue_id5955243">
-                                    <xslt:value-of select="printRequest/niNumber"/>
+                                    <xslt:value-of select="/document/data/job/ninumber"/>
                                  </xslt:variable>
                                  <xsl:if test="string($fieldValue_id5955243)">
                                     <fo:inline id="5098019" font-weight="bold">
@@ -1481,7 +1481,7 @@
                               </fo:block>
                            </fo:table-cell>
                         </fo:table-row>
-                        <xsl:for-each select="&#xA;          (/offences/offence)">
+                        <xsl:for-each select="&#xA;          (/document/data/job/offences/offence)">
                            <fo:table-row id="1B954A55">
                               <xslt:variable name="isFirst_id4938299">
                                  <xslt:choose>
@@ -1793,7 +1793,7 @@
                                           padding-bottom="2pt">
                               <fo:block text-align="right">
                                  <xslt:variable name="fieldValue_id6007407">
-                                    <xslt:value-of select="printRequest/offences/accountTotal"/>
+                                    <xslt:value-of select="/document/data/job/offences/accounttotal"/>
                                  </xslt:variable>
                                  <xsl:if test="string($fieldValue_id6007407)">
                                     <fo:inline id="5467066" font-weight="bold" text-align="right">
@@ -1850,7 +1850,7 @@
                                  <fo:block>
                                     <fo:inline font-weight="bold" font-size="12pt">
                                        <xslt:variable name="fieldValue_id6007462">
-                                          <xslt:value-of select="printRequest/signature"/>
+                                          <xslt:value-of select="/document/data/job/signature"/>
                                        </xslt:variable>
                                        <xsl:if test="string($fieldValue_id6007462)">
                                           <fo:inline id="4974570">
@@ -1889,7 +1889,7 @@
                               <fo:block>
                                  <fo:inline>Date: </fo:inline>
                                  <xslt:variable name="fieldValue_id6007477">
-                                    <xslt:value-of select="printRequest/dateOfOrder"/>
+                                    <xslt:value-of select="/document/data/job/dateoforder"/>
                                  </xslt:variable>
                                  <xsl:if test="string($fieldValue_id6007477)">
                                     <fo:inline id="5636696">
@@ -1923,7 +1923,7 @@
                            <fo:table-cell text-align="right">
                               <fo:block>
                                  <xsl:choose>
-                                    <xsl:when test="/schema/libra = 'LIBRA'">
+                                    <xsl:when test="/document/data/job/schema/libra = 'LIBRA'">
                                        <fo:block id="B217321C">
                                           <xslt:attribute name="id">B217321C</xslt:attribute>
                                           <fo:block>
@@ -1976,12 +1976,12 @@
                      <fo:block text-align="right">
                         <fo:inline font-size="12pt">
                            <xsl:choose>
-                              <xsl:when test="string(/header/ljaname) != ''">
+                              <xsl:when test="string(/document/data/job/header/ljaname) != ''">
                                  <fo:inline id="3C66F63F">
                                     <xslt:attribute name="id">3C66F63F</xslt:attribute>
                                     <fo:inline>
                                        <xslt:variable name="fieldValue_id6024736">
-                                          <xslt:value-of select="printRequest/header/ljaname"/>
+                                          <xslt:value-of select="/document/data/job/header/ljaname"/>
                                        </xslt:variable>
                                        <xsl:if test="string($fieldValue_id6024736)">
                                           <fo:inline id="3C97F63F">
@@ -2018,7 +2018,7 @@
                                     <xslt:attribute name="id">3CCBF63F</xslt:attribute>
                                     <fo:inline>
                                        <xslt:variable name="fieldValue_id6024701">
-                                          <xslt:value-of select="printRequest/header/courtName"/>
+                                          <xslt:value-of select="/document/data/job/header/courtname"/>
                                        </xslt:variable>
                                        <xsl:if test="string($fieldValue_id6024701)">
                                           <fo:inline id="3CFCF63F">
@@ -2053,12 +2053,12 @@
                            </xsl:choose>
                            <fo:inline> (</fo:inline>
                            <xsl:choose>
-                              <xsl:when test="string(/header/ljacode) != ''">
+                              <xsl:when test="string(/document/data/job/header/ljacode) != ''">
                                  <fo:inline id="3CFCF63F">
                                     <xslt:attribute name="id">3CFCF63F_id6852195</xslt:attribute>
                                     <fo:inline>
                                        <xslt:variable name="fieldValue_id6852172">
-                                          <xslt:value-of select="printRequest/header/ljacode"/>
+                                          <xslt:value-of select="/document/data/job/header/ljacode"/>
                                        </xslt:variable>
                                        <xsl:if test="string($fieldValue_id6852172)">
                                           <fo:inline id="3D30F63F">
@@ -2095,7 +2095,7 @@
                                     <xslt:attribute name="id">3D64F63F</xslt:attribute>
                                     <fo:inline>
                                        <xslt:variable name="fieldValue_id6852148">
-                                          <xslt:value-of select="printRequest/header/code"/>
+                                          <xslt:value-of select="/document/data/job/header/code"/>
                                        </xslt:variable>
                                        <xsl:if test="string($fieldValue_id6852148)">
                                           <fo:inline id="3D95F63F">
@@ -2133,7 +2133,7 @@
                      </fo:block>
                      <fo:block text-align="right">
                         <xsl:choose>
-                           <xsl:when test="string(/header/courthousename) != ''">
+                           <xsl:when test="string(/document/data/job/header/courthousename) != ''">
                               <fo:block id="4E646214">
                                  <xslt:attribute name="id">4E646214</xslt:attribute>
                                  <fo:block>
@@ -2141,12 +2141,12 @@
                                        <fo:inline>sitting at </fo:inline>
                                     </fo:inline>
                                     <xsl:choose>
-                                       <xsl:when test="string(/header/courthousename) != ''">
+                                       <xsl:when test="string(/document/data/job/header/courthousename) != ''">
                                           <fo:inline id="4E956214">
                                              <xslt:attribute name="id">4E956214</xslt:attribute>
                                              <fo:inline>
                                                 <xslt:variable name="fieldValue_id6852085">
-                                                   <xslt:value-of select="printRequest/header/courthousename"/>
+                                                   <xslt:value-of select="/document/data/job/header/courthousename"/>
                                                 </xslt:variable>
                                                 <xsl:if test="string($fieldValue_id6852085)">
                                                    <fo:inline id="4EC96214" font-size="12pt">
@@ -2188,7 +2188,7 @@
                      <fo:block text-align="right">
                         <fo:inline font-size="9pt">
                            <xslt:variable name="fieldValue_id6852055">
-                              <xslt:value-of select="printRequest/header/line1"/>
+                              <xslt:value-of select="/document/data/job/header/line1"/>
                            </xslt:variable>
                            <xsl:if test="string($fieldValue_id6852055)">
                               <fo:inline id="20BEB637">
@@ -2222,7 +2222,7 @@
                      <fo:block text-align="right">
                         <fo:inline font-size="9pt">
                            <xslt:variable name="fieldValue_id6852020">
-                              <xslt:value-of select="printRequest/header/line2"/>
+                              <xslt:value-of select="/document/data/job/header/line2"/>
                            </xslt:variable>
                            <xsl:if test="string($fieldValue_id6852020)">
                               <fo:inline id="20EFB637">
@@ -2256,7 +2256,7 @@
                      <fo:block text-align="right">
                         <fo:inline font-size="9pt">
                            <xslt:variable name="fieldValue_id6851990">
-                              <xslt:value-of select="printRequest/header/line3"/>
+                              <xslt:value-of select="/document/data/job/header/line3"/>
                            </xslt:variable>
                            <xsl:if test="string($fieldValue_id6851990)">
                               <fo:inline id="2123B637">
@@ -2303,12 +2303,12 @@
                   <fo:table-cell text-align="right" border-bottom="1pt solid rgb(0, 0, 0)">
                      <fo:block>
                         <xsl:choose>
-                           <xsl:when test="string(/header/ljaname) != ''">
+                           <xsl:when test="string(/document/data/job/header/ljaname) != ''">
                               <fo:inline id="72FE1492">
                                  <xslt:attribute name="id">72FE1492</xslt:attribute>
                                  <fo:inline>
                                     <xslt:variable name="fieldValue_id6911545">
-                                       <xslt:value-of select="printRequest/header/ljaname"/>
+                                       <xslt:value-of select="/document/data/job/header/ljaname"/>
                                     </xslt:variable>
                                     <xsl:if test="string($fieldValue_id6911545)">
                                        <fo:inline id="732F1492" font-size="12pt">
@@ -2345,7 +2345,7 @@
                                  <xslt:attribute name="id">73631492</xslt:attribute>
                                  <fo:inline>
                                     <xslt:variable name="fieldValue_id6911534">
-                                       <xslt:value-of select="printRequest/header/courtName"/>
+                                       <xslt:value-of select="/document/data/job/header/courtname"/>
                                     </xslt:variable>
                                     <xsl:if test="string($fieldValue_id6911534)">
                                        <fo:inline id="73941492" font-size="12pt">
@@ -2384,12 +2384,12 @@
                         <fo:inline font-size="12pt">
                            <fo:inline>Code </fo:inline>
                            <xsl:choose>
-                              <xsl:when test="string(/header/ljacode) != ''">
+                              <xsl:when test="string(/document/data/job/header/ljacode) != ''">
                                  <fo:inline id="5427586">
                                     <xslt:attribute name="id">5427586</xslt:attribute>
                                     <fo:inline>
                                        <xslt:variable name="fieldValue_id6911511">
-                                          <xslt:value-of select="printRequest/header/ljacode"/>
+                                          <xslt:value-of select="/document/data/job/header/ljacode"/>
                                        </xslt:variable>
                                        <xsl:if test="string($fieldValue_id6911511)">
                                           <fo:inline id="4673150">
@@ -2426,7 +2426,7 @@
                                     <xslt:attribute name="id">5294267</xslt:attribute>
                                     <fo:inline>
                                        <xslt:variable name="fieldValue_id6911873">
-                                          <xslt:value-of select="printRequest/header/code"/>
+                                          <xslt:value-of select="/document/data/job/header/code"/>
                                        </xslt:variable>
                                        <xsl:if test="string($fieldValue_id6911873)">
                                           <fo:inline id="38768C5E">

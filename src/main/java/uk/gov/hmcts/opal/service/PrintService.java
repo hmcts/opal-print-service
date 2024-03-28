@@ -1,15 +1,19 @@
 package uk.gov.hmcts.opal.service;
 
+import jakarta.transaction.Transactional;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.fop.apps.FOUserAgent;
 import org.apache.fop.apps.Fop;
 import org.apache.fop.apps.FopFactory;
 import org.apache.fop.apps.MimeConstants;
 import org.springframework.stereotype.Service;
-import uk.gov.hmcts.opal.dto.PrintRequest;
+import uk.gov.hmcts.opal.dto.print.Document;
+import uk.gov.hmcts.opal.entity.PrintDefinition;
+import uk.gov.hmcts.opal.repository.PrintDefinitionRepository;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -23,17 +27,22 @@ import javax.xml.transform.sax.SAXResult;
 import javax.xml.transform.stream.StreamSource;
 
 @Service
+@Transactional
+@RequiredArgsConstructor
 @Slf4j(topic = "PrintService")
 public class PrintService {
 
-    // FOP Configuration
     private final FopFactory fopFactory = FopFactory.newInstance(new File(".").toURI());
 
-    public byte[] generatePdf(PrintRequest request) {
+    private final PrintDefinitionRepository printDefinitionRepository;
+
+    public byte[] generatePdf(Document request) {
         try {
+            // Get print definition from database
+            final PrintDefinition printDef = getPrintDefinition(request.getInfo().getGeneral().getDocref(),
+                                                          request.getInfo().getGeneral().getVersion());
             // Load XSLT template
-            Source xslt = new StreamSource(getClass().getClassLoader()
-                                               .getResourceAsStream("ABD-25_0-postscript.xsl"));
+            Source xslt = new StreamSource(new StringReader(printDef.getXslt()));
 
             // Create a transformer factory
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
@@ -67,10 +76,15 @@ public class PrintService {
         }
     }
 
-    private String convertObjectToXml(PrintRequest request) {
+    private PrintDefinition getPrintDefinition(String docType, String templateId) {
+
+        return printDefinitionRepository.findByDocTypeAndTemplateId(docType, templateId);
+    }
+
+    private String convertObjectToXml(Document request) {
         try {
             // Create JAXBContext for the class of the object
-            JAXBContext context = JAXBContext.newInstance(PrintRequest.class);
+            JAXBContext context = JAXBContext.newInstance(Document.class);
 
             // Create Marshaller
             Marshaller marshaller = context.createMarshaller();

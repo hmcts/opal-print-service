@@ -17,6 +17,7 @@
 
 <module name="Checker">
   <property name="charset" value="UTF-8"/>
+  <module name="SuppressionCommentFilter"/>
 
   <property name="severity" value="warning"/>
 

@@ -13,5 +13,5 @@ import java.util.List;
 @AllArgsConstructor
 public class Impositions {
 
-    private List<Imposition> impositionList;
+    private List<Imposition> imposition;
 }

@@ -14,4 +14,5 @@ public class DefendantAddress {
     private String name;
     private Address address;
     private String company;
+    private String telephone;
 }

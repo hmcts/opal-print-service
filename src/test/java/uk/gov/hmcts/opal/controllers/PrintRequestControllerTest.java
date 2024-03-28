@@ -7,7 +7,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import uk.gov.hmcts.opal.dto.PrintRequest;
+import uk.gov.hmcts.opal.dto.print.Document;
 import uk.gov.hmcts.opal.service.PrintService;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -28,7 +28,7 @@ class PrintRequestControllerTest {
     @Test
     void testPostPrintRequest() {
         // Mock input
-        PrintRequest printRequest = new PrintRequest();
+        Document printRequest = new Document();
 
         // Mock service response
         byte[] mockPdfData = "Mock PDF Data".getBytes();

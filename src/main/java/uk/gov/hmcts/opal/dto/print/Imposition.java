@@ -11,10 +11,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Imposition {
 
-    private String impositionCode;
-    private String impositionText;
-    private String impositionType;
-    private String amountImposed;
+    private String impositioncode;
+    private String impositiontype;
+    private String impositiontext;
+    private String amountimposed;
     private String paid;
     private String balance;
+    private String creditorname;
 }
