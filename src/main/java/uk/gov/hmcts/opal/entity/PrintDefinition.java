@@ -26,7 +26,7 @@ public class PrintDefinition {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "print_definition_id_seq")
-    @SequenceGenerator(name = "defendant_account_id_seq", sequenceName = "print_definition_id_seq", allocationSize = 1)
+    @SequenceGenerator(name = "print_definition_id_seq", sequenceName = "print_definition_id_seq", allocationSize = 1)
     @Column(name = "print_definition_id")
     private Long printDefinitionId;
 
@@ -48,8 +48,8 @@ public class PrintDefinition {
 
     private String system;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    private LocalDateTime changedDate;
+//    @Temporal(TemporalType.TIMESTAMP)
+//    private LocalDateTime changedDate;
 
     private String templateId;
 
