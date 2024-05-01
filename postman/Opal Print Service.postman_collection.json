@@ -1,0 +1,41 @@
+{
+	"info": {
+		"_postman_id": "47e7c899-66b9-485a-bf81-13002887dbc6",
+		"name": "Opal Print Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1068308"
+	},
+	"item": [
+		{
+			"name": "generate-pdf",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"header\": {\n        \"courtName\": \"Central Criminal Court\",\n        \"code\": \"CCC001\",\n        \"line1\": \"Old Bailey, London EC4M 7EH, UK\"\n    },\n    \"division\": \"Legal Division\",\n    \"accountNumber\": \"AC123456\",\n    \"caseNumber\": \"CN789012\",\n    \"dob\": \"1980-01-01\",\n    \"defendantName\": \"John Doe\",\n    \"sex\": \"Male\",\n    \"schema\": {\n        \"libra\": \"LIB100\",\n        \"met\": \"MET200\"\n    },\n    \"defendantAddress\": {\n        \"name\": \"John Doe\",\n        \"address\": {\n            \"line1\": \"123 Fake Street\",\n            \"postcode\": \"AB1 2CD\"\n        },\n        \"company\": \"Doe Enterprises\"\n    },\n    \"amountOutstanding\": \"400\",\n    \"defendantInDefault\": \"No\",\n    \"dwpapNumber\": \"DW1234\",\n    \"offences\": {\n        \"offenceList\": [\n            {\n                \"caseNumber\": \"12345\",\n                \"dateImposed\": \"2024-04-04\",\n                \"offenceSuffix\": \"TRF\",\n                \"offenceTitle\": \"Traffic Violation\",\n                \"offenceStartDate\": \"2024-04-04\",\n                \"dvla\": \"DVLA123\",\n                \"dateBegun\": \"2024-04-04\",\n                \"impositions\": {\n                    \"impositionList\": [\n                        {\n                            \"impositionCode\": \"FIN100\",\n                            \"impositionText\": \"Fine imposed for traffic violation\",\n                            \"impositionType\": \"Fine\",\n                            \"amountImposed\": \"500\",\n                            \"paid\": \"100\",\n                            \"balance\": \"400\"\n                        }\n                    ]\n                }\n            }\n        ],\n        \"totalImposition\": \"500\",\n        \"accountTotal\": \"500\",\n        \"totalPaid\": \"100\"\n    },\n    \"dateProduced\": \"2024-04-04\",\n    \"sessionId\": \"SID123456789\",\n    \"registerValidated\": \"Yes\",\n    \"dateOfOrder\": \"2024-04-04\",\n    \"signature\": \"Digital Signature\",\n    \"endTime\": \"08:47:51\",\n    \"elapsedSecs\": \"3600\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4660/api/print/generate-pdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4660",
+					"path": [
+						"api",
+						"print",
+						"generate-pdf"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
