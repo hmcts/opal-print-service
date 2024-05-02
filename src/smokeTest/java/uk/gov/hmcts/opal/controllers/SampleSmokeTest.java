@@ -15,12 +15,9 @@ import static io.restassured.RestAssured.given;
 
 
 @SpringBootTest
-@EnableAutoConfiguration(exclude = {
-    org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration.class,
-    org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration.class
-})
+@EnableAutoConfiguration
 @TestPropertySource(properties = {
-    "spring.flyway.enabled=false"
+    "spring.flyway.enabled=true"
 })
 class SampleSmokeTest {
 
