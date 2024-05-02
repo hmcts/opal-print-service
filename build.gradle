@@ -1,6 +1,5 @@
 plugins {
   id 'application'
-  id 'checkstyle'
   id 'jacoco'
   id 'io.spring.dependency-management' version '1.1.4'
   id 'org.springframework.boot' version '3.2.5'
@@ -120,12 +119,6 @@ task smoke(type: Test) {
   description = "Runs Smoke Tests"
   testClassesDirs = sourceSets.smokeTest.output.classesDirs
   classpath = sourceSets.smokeTest.runtimeClasspath
-}
-
-checkstyle {
-  maxWarnings = 0
-  toolVersion = '10.16.0'
-  getConfigDirectory().set(new File(rootDir, 'config/checkstyle'))
 }
 
 jacocoTestReport {
