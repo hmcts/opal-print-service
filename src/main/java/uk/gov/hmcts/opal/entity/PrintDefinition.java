@@ -44,9 +44,6 @@ public class PrintDefinition {
 
     private String system;
 
-//    @Temporal(TemporalType.TIMESTAMP)
-//    private LocalDateTime changedDate;
-
     private String templateId;
 
     private String addressValElement;

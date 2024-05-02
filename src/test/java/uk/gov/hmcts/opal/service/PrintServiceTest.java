@@ -22,15 +22,12 @@ import uk.gov.hmcts.opal.dto.print.Schema;
 import uk.gov.hmcts.opal.entity.PrintDefinition;
 import uk.gov.hmcts.opal.repository.PrintDefinitionRepository;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.StringReader;
-import java.net.URISyntaxException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamSource;
+import java.io.ByteArrayOutputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.ArgumentMatchers.any;
@@ -117,11 +114,11 @@ class PrintServiceTest {
             .dwpapnumber("111")
             .offences(buildOffences())
             .dateproduced("01/01/2020")
-            .session_id("111")
+            .sessionId("111")
             .registervalidated("Y")
             .dateoforder("01/01/2021")
             .signature("signature")
-            .end_time("01:00")
+            .endTime("01:00")
             .elapsedsecs("20")
             .jobcentrename("Big Job Centre")
             .jobcentreaddress(buildJobCentreAddress())
@@ -132,7 +129,9 @@ class PrintServiceTest {
     private PrintDefinition buildPrintDefinition() {
 
         // Load XSL file content from test resources
-        final String xsltContent = new String(Files.readAllBytes(Path.of("src/test/resources/ABD-25_0-postscript.xsl")));
+        final String xsltContent = new String(Files.readAllBytes(
+            Path.of("src/test/resources/ABD-25_0-postscript.xsl"))
+        );
 
         return PrintDefinition.builder()
             .printDefinitionId(1L)

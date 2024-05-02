@@ -1,5 +1,6 @@
 package uk.gov.hmcts.opal.dto.print;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -26,15 +27,15 @@ public class Job {
     private String dwpapnumber;
     private Offences offences;
     private String dateproduced;
-    //CHECKSTYLE:OFF
-    private String session_id;
-    //CHECKSTYLE:ON
+
+    @JsonProperty("session_id")
+    private String sessionId;
     private String registervalidated;
     private String dateoforder;
     private String signature;
-    //CHECKSTYLE:OFF
-    private String end_time;
-    //CHECKSTYLE:ON
+
+    @JsonProperty("session_id")
+    private String endTime;
     private String elapsedsecs;
     private String jobcentrename;
     private JobCentreAddress jobcentreaddress;

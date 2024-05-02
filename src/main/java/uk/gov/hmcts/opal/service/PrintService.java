@@ -15,16 +15,16 @@ import uk.gov.hmcts.opal.dto.print.Document;
 import uk.gov.hmcts.opal.entity.PrintDefinition;
 import uk.gov.hmcts.opal.repository.PrintDefinitionRepository;
 
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.StringReader;
-import java.io.StringWriter;
 import javax.xml.transform.Result;
 import javax.xml.transform.Source;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.sax.SAXResult;
 import javax.xml.transform.stream.StreamSource;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.StringReader;
+import java.io.StringWriter;
 
 @Service
 @Transactional
