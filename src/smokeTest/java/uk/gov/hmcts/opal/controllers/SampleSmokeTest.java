@@ -17,7 +17,7 @@ import static io.restassured.RestAssured.given;
 @SpringBootTest
 @EnableAutoConfiguration
 @TestPropertySource(properties = {
-    "spring.flyway.enabled=true"
+    "spring.flyway.enabled=false"
 })
 class SampleSmokeTest {
 
