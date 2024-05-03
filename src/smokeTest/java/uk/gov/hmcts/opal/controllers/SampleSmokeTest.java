@@ -2,32 +2,27 @@ package uk.gov.hmcts.opal.controllers;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.http.Method;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.TestPropertySource;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
 
 
-@SpringBootTest
-@EnableAutoConfiguration
-@TestPropertySource(properties = {
-    "spring.flyway.enabled=false"
-})
 class SampleSmokeTest {
 
-    @Value("${TEST_URL:http://localhost:4660}")
-    private String testUrl;
+    private static final String DEFAULT_BASE_URL = "http://localhost:4660";
 
-    @BeforeEach
-    public void setUp() {
-        RestAssured.baseURI = testUrl;
+    @BeforeAll
+    public static void setup() {
+        RestAssured.baseURI = System.getenv().getOrDefault("TEST_URL", DEFAULT_BASE_URL);
+        ;
         RestAssured.useRelaxedHTTPSValidation();
+
     }
 
     @Test
@@ -41,5 +36,15 @@ class SampleSmokeTest {
 
         Assertions.assertEquals(200, response.statusCode());
         Assertions.assertTrue(response.asString().startsWith("Welcome"));
+    }
+
+    @Test
+    public void testHealthCheck() {
+        RequestSpecification httpRequest = given();
+
+        Response response = httpRequest.request(Method.GET, "/health");
+
+        response.then().statusCode(200)
+            .body("status", equalTo("UP"));
     }
 }
