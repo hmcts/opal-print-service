@@ -36,7 +36,7 @@ public class GeneratePdfStepDef extends BaseStepDef {
     @When("I make a request to the generate pdf api with {string}")
     public void generatePdfApi(String pathToFile) throws IOException {
         String jsonToPost = new String(Files.readAllBytes(Paths.get(getBaseJsonPath() + pathToFile)));
-        log.info("json payload to test: " +jsonToPost);
+        log.info("json payload to test: " + jsonToPost);
         Response response = SerenityRest
             .given()
             .accept("*/*")
