@@ -15,10 +15,11 @@ import java.util.Date;
 import java.util.logging.Logger;
 
 public class GeneratePdfStepDef extends BaseStepDef {
-    Logger log = Logger.getLogger(GeneratePdfStepDef.class.getName());
+    static final Logger log = Logger.getLogger(GeneratePdfStepDef.class.getName());
     ThreadLocal<String> pdfName = new ThreadLocal<>();
 
     private static void savePdfToFile(byte[] pdfContent, String filePath) {
+        log.info("Saving the PDF file: " + filePath);
         try (FileOutputStream fos = new FileOutputStream(new File(filePath))) {
             fos.write(pdfContent);
         } catch (IOException e) {
@@ -49,8 +50,9 @@ public class GeneratePdfStepDef extends BaseStepDef {
     @When("The pdf is syntactically correct")
     public void pdfSyntaxCorrect() throws IOException {
         try (PDDocument pdf = PDDocument.load(new File(pdfName.get()))) {
-            log.info("loaded PDF file + " + pdfName.get());
+            log.info("Loaded PDF file + " + pdfName.get());
         } catch (IOException e) {
+            log.info("Error loading PDF file + " + pdfName.get());
             log.info("PDF syntax is incorrect, could not be loaded: " + e);
             throw e;
         }
