@@ -23,7 +23,7 @@ public class GeneratePdfStepDef extends BaseStepDef {
         try (FileOutputStream fos = new FileOutputStream(new File(filePath))) {
             fos.write(pdfContent);
         } catch (IOException e) {
-            System.err.println("Error occurred while saving PDF to file: " + e.getMessage());
+            log.info("Error occurred while saving PDF to file: " + e.getMessage());
         }
     }
 
@@ -36,6 +36,7 @@ public class GeneratePdfStepDef extends BaseStepDef {
     @When("I make a request to the generate pdf api with {string}")
     public void generatePdfApi(String pathToFile) throws IOException {
         String jsonToPost = new String(Files.readAllBytes(Paths.get(getBaseJsonPath() + pathToFile)));
+        log.info("json payload to test: " +jsonToPost);
         Response response = SerenityRest
             .given()
             .accept("*/*")
