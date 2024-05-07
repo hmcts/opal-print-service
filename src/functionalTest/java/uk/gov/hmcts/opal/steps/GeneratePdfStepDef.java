@@ -48,9 +48,8 @@ public class GeneratePdfStepDef extends BaseStepDef {
 
     @When("The pdf is syntactically correct")
     public void pdfSyntaxCorrect() throws IOException {
-        try {
-            PDDocument pdf = PDDocument.load(new File(pdfName.get()));
-            pdf.close();
+        try (PDDocument pdf = PDDocument.load(new File(pdfName.get()))) {
+            log.info("loaded PDF file + " + pdfName.get());
         } catch (IOException e) {
             log.info("PDF syntax is incorrect, could not be loaded: " + e);
             throw e;
