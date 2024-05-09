@@ -34,7 +34,7 @@ public class Job {
     private String dateoforder;
     private String signature;
 
-    @JsonProperty("session_id")
+    @JsonProperty("end_time")
     private String endTime;
     private String elapsedsecs;
     private String jobcentrename;
