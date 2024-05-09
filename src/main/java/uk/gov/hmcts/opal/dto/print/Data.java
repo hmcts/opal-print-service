@@ -2,17 +2,13 @@ package uk.gov.hmcts.opal.dto.print;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
+@lombok.Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Address {
+public class Data {
 
-    private String line1;
-    private String line2;
-    private String line3;
-    private String postcode;
+    private Job job;
 }

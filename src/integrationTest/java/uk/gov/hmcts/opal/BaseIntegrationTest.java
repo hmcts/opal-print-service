@@ -13,6 +13,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 @SuppressWarnings("HideUtilityClassConstructor")
 public class BaseIntegrationTest {
 
+
     @ServiceConnection
     @Container
     static PostgreSQLContainer databaseContainer = new PostgreSQLContainer<>("postgres:15-alpine");

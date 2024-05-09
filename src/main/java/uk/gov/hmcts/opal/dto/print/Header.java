@@ -11,7 +11,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Header {
 
-    private String courtName;
+    private String courtname;
     private String code;
     private String line1;
+    private String line2;
+    private String line3;
 }

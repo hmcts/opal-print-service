@@ -9,10 +9,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Address {
+public class General {
 
-    private String line1;
-    private String line2;
-    private String line3;
-    private String postcode;
+    private String version;
+    private String docref;
 }

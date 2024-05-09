@@ -5,8 +5,7 @@ import io.restassured.response.Response;
 import net.serenitybdd.rest.SerenityRest;
 import org.apache.pdfbox.pdmodel.PDDocument;
 
-import java.io.File;
-import java.io.FileOutputStream;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -15,16 +14,9 @@ import java.util.Date;
 import java.util.logging.Logger;
 
 public class GeneratePdfStepDef extends BaseStepDef {
-    Logger log = Logger.getLogger(GeneratePdfStepDef.class.getName());
-    ThreadLocal<String> pdfName = new ThreadLocal<>();
+    static final Logger log = Logger.getLogger(GeneratePdfStepDef.class.getName());
+    ThreadLocal<byte[]> pdfContent = new ThreadLocal<>();
 
-    private static void savePdfToFile(byte[] pdfContent, String filePath) {
-        try (FileOutputStream fos = new FileOutputStream(new File(filePath))) {
-            fos.write(pdfContent);
-        } catch (IOException e) {
-            System.err.println("Error occurred while saving PDF to file: " + e.getMessage());
-        }
-    }
 
     public static String dateTime() {
         SimpleDateFormat dateFormat = new SimpleDateFormat("ddMMyy-HHmmss");
@@ -35,6 +27,7 @@ public class GeneratePdfStepDef extends BaseStepDef {
     @When("I make a request to the generate pdf api with {string}")
     public void generatePdfApi(String pathToFile) throws IOException {
         String jsonToPost = new String(Files.readAllBytes(Paths.get(getBaseJsonPath() + pathToFile)));
+        log.info("json payload to test: " + jsonToPost);
         Response response = SerenityRest
             .given()
             .accept("*/*")
@@ -42,16 +35,15 @@ public class GeneratePdfStepDef extends BaseStepDef {
             .body(jsonToPost)
             .when()
             .post(getTestUrl() + "/api/print/generate-pdf");
-        pdfName.set("ABD_" + dateTime() + "_.pdf");
-        savePdfToFile(response.getBody().asByteArray(), pdfName.get());
+        pdfContent.set(response.getBody().asByteArray());
     }
 
     @When("The pdf is syntactically correct")
     public void pdfSyntaxCorrect() throws IOException {
-        try {
-            PDDocument pdf = PDDocument.load(new File(pdfName.get()));
-            pdf.close();
+        try (PDDocument pdf = PDDocument.load(new ByteArrayInputStream(pdfContent.get()))) {
+            log.info("Loaded PDF content from memory");
         } catch (IOException e) {
+            log.info("Error loading PDF");
             log.info("PDF syntax is incorrect, could not be loaded: " + e);
             throw e;
         }
