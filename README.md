@@ -1,5 +1,9 @@
 # Opal Print Service
 
+[![API Docs](https://img.shields.io/badge/API%20Docs-Print_Services-e140ad.svg)](https://hmcts.github.io/cnp-api-docs/swagger.html?url=https://hmcts.github.io/cnp-api-docs/specs/opal-print-service.json)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=uk.gov.hmcts.reform%3Aopal-print-service&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=uk.gov.hmcts.reform%3Aopal-print-service)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=uk.gov.hmcts.reform%3Aopal-print-service&metric=coverage)](https://sonarcloud.io/summary/new_code?id=uk.gov.hmcts.reform%3Aopal-print-service)
+
 ## Purpose
 
 The purpose of this service is to generate documents for printing based on Apache FOP that generates PDF from a given template
