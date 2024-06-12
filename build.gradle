@@ -8,7 +8,7 @@ plugins {
   id 'org.sonarqube' version '5.0.0.4638'
   id 'uk.gov.hmcts.java' version '0.12.63'
   id 'net.serenity-bdd.serenity-gradle-plugin' version '4.0.46'
-  id 'org.flywaydb.flyway' version '10.14.0'
+  id 'org.flywaydb.flyway' version '10.15.0'
 }
 
 group = 'uk.gov.hmcts'
