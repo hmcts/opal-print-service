@@ -208,11 +208,11 @@ dependencies {
   implementation 'org.flywaydb:flyway-core'
   implementation 'org.postgresql:postgresql'
 
-  implementation 'org.projectlombok:lombok:1.18.32'
-  annotationProcessor 'org.projectlombok:lombok:1.18.32'
+  implementation 'org.projectlombok:lombok:1.18.34'
+  annotationProcessor 'org.projectlombok:lombok:1.18.34'
 
-  testImplementation 'org.projectlombok:lombok:1.18.32'
-  testAnnotationProcessor 'org.projectlombok:lombok:1.18.32'
+  testImplementation 'org.projectlombok:lombok:1.18.34'
+  testAnnotationProcessor 'org.projectlombok:lombok:1.18.34'
 
   implementation group: 'org.apache.xmlgraphics', name: 'fop', version: '2.9'
   implementation group: 'org.apache.xmlgraphics', name: 'fop-core', version: '2.9'
