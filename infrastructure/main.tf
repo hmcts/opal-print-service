@@ -26,7 +26,7 @@ module "opal-print-db" {
 
   pgsql_databases = [
     {
-      name: local.db_name
+      name : local.db_name
     }
   ]
 
