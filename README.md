@@ -1,3 +1,7 @@
+# NOTE
+This repository is archived as this functionality will be part of opal-fines-service. 
+
+
 # Opal Print Service
 
 [![API Docs](https://img.shields.io/badge/API%20Docs-Print_Services-e140ad.svg)](https://hmcts.github.io/cnp-api-docs/swagger.html?url=https://hmcts.github.io/cnp-api-docs/specs/opal-print-service.json)
